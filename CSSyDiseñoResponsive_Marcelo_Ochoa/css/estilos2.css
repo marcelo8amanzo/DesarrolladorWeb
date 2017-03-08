@@ -1,0 +1,160 @@
+html, body, header, section, footer{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+
+}
+@font-face {
+  font-family: 'cheloFont';
+  src: url('../font/DancingScript-Regular.otf') format('otf'),
+       url('../font/dancingscript-regular-webfont.woff2') format('woff2'),
+       url('../font/dancingscript-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-size: normal;
+}
+a{
+  text-decoration: none;
+  color: #0B3861;
+}
+body{
+  width: 100%;
+  height: auto;
+  background-color: #02010a;
+  font-family: 'cheloFont';
+}
+.contenedor{
+  margin-top: 0;
+  width: 900px;
+  margin: auto;
+}
+@media (max-width:900px){
+  .contenedor{
+    width: 100%;
+   }
+   .galery{
+     flex-direction: column;
+   }
+   div [class*="bloq"]{
+    width: 100%;
+    flex: 0 0 100%;
+
+  }
+
+   footer{
+     flex:100%;
+     flex-direction: column;
+     text-align: center;
+   }
+   footer section{
+     width: 100%;
+
+
+   }
+ }
+ @media (max-width:300px){
+   header{font-size: 0.75em;}
+ }
+header {
+  /*position: absolute;*/
+  background-color: #5b7989;
+  border-radius: 10px 10px 0 0;
+  font-family: 'cheloFont';
+  margin-top: 0;
+  width: 100%;
+  height: auto;
+  padding-top: 2%;
+  }
+h1{
+  text-align:left;
+  color: white;
+  text-shadow: 0 2px #02010a;
+  margin-left: 5%;
+  letter-spacing: 0.1em;
+}
+header ul{
+  text-align: right;
+  list-style: none;
+  margin-right: 5%;
+}
+header ul li{
+  display: inline;
+}
+nav{
+  overflow: hidden;
+}
+header li a{
+  color: #0B3861;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2%;
+  background-color: #5b7989;
+}
+header li a:hover{
+ text-decoration: none;
+ padding: 2%;
+ background-color: #0080FF;
+}
+
+.galery{
+  background-color: #d5c75f;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+
+}
+div [class*="bloq"]{
+
+  flex: 0 0 32%;
+  height: auto;
+  margin: 1% auto 1% auto;
+  text-align: center;
+}
+div [class*="1"]{
+  -webkit-filter:blur(10px);
+  filter: blur(10px);
+}
+ section div:nth-child(even){
+   -webkit-filter:grayscale(100%);
+   filter: grayscale(100%);
+ }
+ section div:nth-child(3){
+   -webkit-filter:sepia(90%);
+   filter: sepia(90%);
+ }
+ div [class*="bloq"]:hover{
+   transform: scale(1.03);
+   -webkit-filter:sepia(0%);
+   filter: sepia(0%);
+   -webkit-filter:grayscale(0%);
+   filter: grayscale(0%);
+   -webkit-filter:blur(0px);
+   filter: blur(0px);
+ }
+footer{
+  margin: auto;
+  color: #0B3861;
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  font-family: arial;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 1% 0 1% 0;
+}
+footer ul li{
+  list-style: none;
+}
+footer ul li a{
+  font-size: 0.75em;
+}
+footer section{
+  width: 22%;
+  padding:  1%;
+  margin: auto;
+}
+.contenedor header nav ul li:nth-child(3) a{
+  background-color: #d5c75f;
+}
